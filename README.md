@@ -2,9 +2,11 @@
 
 ## Overview
 
-"Where's My Stuff?" is a mobile application designed to help you keep track of your belongings. Using your phone's camera, you can quickly scan items, and the app will automatically identify them using a sophisticated machine-learning model. You can then assign your items to a specific place, making it easy to remember where you've stored them.
+"Where's My Stuff?" is a mobile application designed to help you keep track of your belongings. Using your phone's camera, you can quickly scan items, and the app will automatically identify them using a pruned MobileNet V4 Small model. You can then assign your items to a specific place, making it easy to remember where you've stored them.
 
 The app features a clean, modern interface with both light and dark themes, and it's built with simplicity and ease of use in mind.
+
+This app was built from model pruning and finetuning to flutter app development in 3 days as a challenge in fast prototyping. AI agents were used to assist with handling of the coding parts for speed.
 
 ## Features
 
@@ -30,7 +32,7 @@ The app features a clean, modern interface with both light and dark themes, and 
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repository-url>
+    git clone <https://github.com/Bhabesh-Rath/Where-s-my-stuff-.git>
     ```
 2.  **Get dependencies:**
     ```bash
@@ -43,15 +45,12 @@ The app features a clean, modern interface with both light and dark themes, and 
 
 ## Screenshots
 
-*(You can add screenshots of the app here to showcase its features. For example, a screenshot of the camera view, the label selection dialog, and the inventory list.)*
-
-**Example Screenshot Placeholder:**
-
-![App Screenshot](https://via.placeholder.com/300x600.png?text=App+Screenshot)
+![Screenshot_20260311_202309](https://github.com/user-attachments/assets/bf672ddf-29f6-4dcb-a64c-f147a4f8638e)
+![Screenshot_20260311_202318](https://github.com/user-attachments/assets/6e2e89e7-6fcd-433f-a1fb-4661c7a1e641)
+![Screenshot_20260311_202330](https://github.com/user-attachments/assets/f75f7a80-5d4a-4ebb-9268-2af113fdb53d)
 
 ## Future Improvements
 
-*   **Cloud Sync:** Sync your inventory across multiple devices using a cloud-based backend like Firebase.
-*   **Search Functionality:** Add a search bar to quickly find items in your inventory.
-*   **Barcode/QR Code Scanning:** Extend the app's capabilities to include barcode and QR code scanning for even faster item identification.
-*   **Custom Labels:** Allow users to add their own custom labels for items that the AI model may not recognize.
+*   **Better Classification:** Finetuning with a different Dataset or using a different base model for more accurate labeling.
+*   **Object Marking:** A segmentation model to separate out different objects to aid with classification.
+*   **Custom Labels and continuous finetuning:** Allow users to add their own custom labels for items that the AI model may not recognize and then train the model during downtime to better it's classifications with user data.
